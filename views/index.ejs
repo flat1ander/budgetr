@@ -8,11 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
 </head>
+<% console.log(budget) %>
+<% let bankAccount = 0; %>
+<% bankAccount = 0 %>
 <body>
+    <% budget.forEach(item => bankAccount += item.amount) %>
     <h1>Budgetr ALL</h1>
+    <h2>Bank Balance: <%= bankAccount %></h2>
     <div class = 'container'>
         <button onclick = "window.location.href='http://localhost:4000/budgets/new';">Add New Budget Item</button>
         <% for(let i = 0; i < budget.length; i++) { %>
+            <% bankAccount = bankAccount + budget[i].amount %>
         <table>
             <tr>
                 <td>date: <%= budget[i].date %></td>
