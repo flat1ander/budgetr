@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+   <div class ="container">
+    <h1><%= budgetItem.name %></h1>
+    <button onclick = "window.location.href='http://localhost:4000/budgets';">BACK</button>
+    <h2>date: <%= budgetItem.date %></h2>
+    <h2>name: <%= budgetItem.name %></h2>
+    <h2>from: <%= budgetItem.from %></h2>
+    <h2>amount: <%= budgetItem.amount %></h2>
+    <h2>tags: <%= budgetItem.tags %></h2>
+</div>
+</body>
+</html>

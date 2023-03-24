@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/skeleton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index</title>
 </head>
 <body>
-    
+    <h1>Budgetr ALL</h1>
+    <div class = 'container'>
+        <button onclick = "window.location.href='http://localhost:4000/budgets/new';">Add New Budget Item</button>
+        <% for(let i = 0; i < budget.length; i++) { %>
+        <table>
+            <tr>
+                <td>date: <%= budget[i].date %></td>
+                <td><a href ="/budgets/<%= i %>">name: <%= budget[i].name %></a></td>
+                <td>from: <%= budget[i].from %></td>
+                <td>amount: <%= budget[i].amount %></td>
+            </tr>
+        </table>
+    <% } %>
+    </div>
 </body>
 </html>
